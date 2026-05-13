@@ -123,8 +123,14 @@
 
 .admin-link-button:hover,
 .admin-link-button:focus-visible {
-    color: var(--text);
+    color: #ff8b8b;
     outline: none;
+}
+
+body.light-mode .admin-link-button:hover,
+body.light-mode .admin-link-button:focus-visible {
+    color: #b91c1c;
+    background-color:rgb(236, 236, 226);
 }
 
 .admin-form {
@@ -288,6 +294,18 @@ body.light-mode .admin-form select {
 body.light-mode .admin-table-row,
 body.light-mode .admin-list-item {
     border-color: rgba(5, 7, 13, 0.14);
+}
+
+body.light-mode .admin-dashboard .section-header a {
+    color: var(--text);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+}
+
+body.light-mode .admin-dashboard .section-header a:hover,
+body.light-mode .admin-dashboard .section-header a:focus-visible {
+    color: var(--accent);
+    outline: none;
 }
 
 @media (max-width: 1100px) {

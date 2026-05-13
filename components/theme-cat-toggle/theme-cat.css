@@ -91,6 +91,7 @@ body.light-mode .section-header,
 body.light-mode .skill-column,
 body.light-mode .repo-list {
     border-color: var(--line-soft);
+    
 }
 
 body.light-mode .language-row {

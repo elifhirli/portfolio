@@ -1,0 +1,196 @@
+.contact,
+.contact-section {
+    padding: 72px 0;
+}
+
+.contact form,
+.contact-card {
+    max-width: 720px;
+    border: 1px solid var(--line);
+    background: var(--panel);
+    padding: 18px;
+}
+
+input,
+textarea,
+select {
+    width: 100%;
+    border: 1px solid var(--line);
+    background: #090b0e;
+    color: var(--text);
+    padding: 12px;
+    font: inherit;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+    border-color: var(--accent);
+    outline: none;
+}
+
+button,
+input[type="submit"] {
+    min-height: 44px;
+    border: 1px solid var(--text);
+    background: transparent;
+    color: var(--text);
+    padding: 10px 14px;
+    font: inherit;
+    font-weight: 900;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+button:hover,
+input[type="submit"]:hover {
+    background: var(--text);
+    color: var(--bg);
+}
+
+.contact-terminal {
+    padding: 40px 0 110px;
+}
+
+.contact-panel {
+    position: relative;
+    border: 1px solid var(--line);
+    background: rgba(8, 10, 15, 0.52);
+    padding: 38px 30px 34px;
+    box-shadow: 2px 2px 0 rgba(255,255,255,0.16);
+}
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 48px;
+}
+
+.contact-column {
+    display: grid;
+    gap: 20px;
+}
+
+.contact-item,
+.contact-links {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    min-height: 24px;
+    color: var(--text);
+    font-family: "Courier New", Courier, monospace;
+    font-size: 14px;
+    font-weight: 900;
+    line-height: 1.25;
+}
+
+.contact-item span {
+    flex: 0 0 18px;
+    color: var(--text);
+    font-size: 14px;
+    text-align: center;
+}
+
+.contact-item p {
+    margin: 0;
+}
+
+.contact-item a,
+.contact-links a {
+    color: var(--text);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    text-decoration-thickness: 1px;
+    overflow-wrap: normal;
+    word-break: keep-all;
+}
+
+.contact-item a:hover,
+.contact-links a:hover,
+.contact-item a:focus-visible,
+.contact-links a:focus-visible {
+    color: var(--accent);
+    outline: none;
+}
+
+.contact-links {
+    padding-left: 32px;
+    flex-wrap: wrap;
+}
+
+.contact-submit {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    min-width: 170px;
+    min-height: 42px;
+    border: 1px solid rgba(255,255,255,0.78);
+    background: transparent;
+    color: var(--text);
+    padding: 0 18px;
+    font-family: "Courier New", Courier, monospace;
+    font-size: 12px;
+    font-weight: 900;
+    line-height: 1;
+    text-transform: uppercase;
+    cursor: pointer;
+    box-shadow: 2px 2px 0 rgba(255,255,255,0.18);
+    transition: background 0.2s ease, color 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.contact-submit::before {
+    content: ">";
+    color: var(--accent-2);
+}
+
+.contact-submit:hover,
+.contact-submit:focus-visible {
+    border-color: var(--accent-2);
+    background: rgba(73, 242, 160, 0.1);
+    color: var(--text);
+    box-shadow: 2px 2px 0 rgba(73, 242, 160, 0.45);
+    outline: none;
+}
+
+.contact-submit:active {
+    transform: translate(1px, 1px);
+    box-shadow: 1px 1px 0 rgba(73, 242, 160, 0.45);
+}
+
+@media (max-width: 920px) {
+    .contact-grid {
+        gap: 28px;
+    }
+}
+
+@media (max-width: 760px) {
+    .contact-terminal {
+        padding: 36px 0 72px;
+    }
+
+    .contact-grid {
+        grid-template-columns: 1fr;
+        gap: 22px;
+    }
+
+    .contact-panel {
+        padding: 34px 18px 28px;
+    }
+
+    .contact-links {
+        padding-left: 32px;
+    }
+}
+
+@media (max-width: 420px) {
+    .contact-item,
+    .contact-links {
+        align-items: flex-start;
+        font-size: 12px;
+    }
+
+    .contact-links {
+        padding-left: 0;
+    }
+}

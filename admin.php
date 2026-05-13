@@ -133,6 +133,14 @@ $experienceRows = mysqli_query($conn, "SELECT id, company, role, start_date, end
 <?php include "includes/navbar.php"; ?>
 
 <main>
+    <?php if (isset($_COOKIE['last_admin_login'])) { ?>
+
+        <div class="admin-cookie-info">
+            LAST LOGIN:
+            <?php echo htmlspecialchars($_COOKIE['last_admin_login']); ?>
+        </div>
+
+    <?php } ?>
 
 <section class="admin-dashboard">
     <div class="section-header">

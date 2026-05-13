@@ -8,15 +8,30 @@ if (isAdminLoggedIn()) {
 }
 
 $error = '';
+
 startAdminSession();
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+
     if (!verifyCsrfToken($_POST['csrf_token'] ?? '')) {
+
         $error = 'INVALID_SECURITY_TOKEN';
+
     } elseif (loginAdmin($conn, $_POST['username'] ?? '', $_POST['password'] ?? '')) {
+
+        // COOKIE
+        setcookie(
+            "last_admin_login",
+            date("Y-m-d H:i:s"),
+            time() + (86400 * 7),
+            "/"
+        );
+
         header('Location: /portfolio/admin.php');
         exit;
+
     } else {
+
         $error = 'INVALID_ADMIN_CREDENTIALS';
     }
 }
@@ -26,34 +41,71 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 <?php include "includes/navbar.php"; ?>
 
 <main>
+
     <section class="admin-login">
+
         <div class="section-header">
             <h2>ADMIN_LOGIN</h2>
             <span>SECURE_SESSION</span>
         </div>
 
-        <form class="admin-form admin-login-form" method="post" action="admin-login.php" autocomplete="off">
+        <form
+            class="admin-form admin-login-form"
+            method="post"
+            action="admin-login.php"
+            autocomplete="off"
+        >
+
             <span class="panel-title">AUTH_REQUIRED</span>
 
-            <input type="hidden" name="csrf_token" value="<?php echo htmlspecialchars(csrfToken(), ENT_QUOTES, 'UTF-8'); ?>">
+            <input
+                type="hidden"
+                name="csrf_token"
+                value="<?php echo htmlspecialchars(csrfToken(), ENT_QUOTES, 'UTF-8'); ?>"
+            >
 
             <?php if ($error !== '') { ?>
-                <p class="admin-alert"><?php echo htmlspecialchars($error, ENT_QUOTES, 'UTF-8'); ?></p>
+
+                <p class="admin-alert">
+                    <?php echo htmlspecialchars($error, ENT_QUOTES, 'UTF-8'); ?>
+                </p>
+
             <?php } ?>
 
             <div class="admin-form-field">
+
                 <label for="username">USERNAME</label>
-                <input id="username" type="text" name="username" required>
+
+                <input
+                    id="username"
+                    type="text"
+                    name="username"
+                    required
+                >
+
             </div>
 
             <div class="admin-form-field">
+
                 <label for="password">PASSWORD</label>
-                <input id="password" type="password" name="password" required>
+
+                <input
+                    id="password"
+                    type="password"
+                    name="password"
+                    required
+                >
+
             </div>
 
-            <button class="admin-button" type="submit">LOGIN</button>
+            <button class="admin-button" type="submit">
+                LOGIN
+            </button>
+
         </form>
+
     </section>
+
 </main>
 
 <?php include "includes/footer.php"; ?>

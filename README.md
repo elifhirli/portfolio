@@ -1,54 +1,64 @@
-# Elif Nur Hirli Portfolio
+# Elif Nur Hırlı Portfolio
 
-Personal portfolio website built with PHP, MySQL, CSS, and JavaScript.
+Personal portfolio website developed using PHP, MySQL, JavaScript, HTML5, and CSS3. The project was designed as a dynamic full-stack web application to showcase academic background, projects, and technical skills.
 
-## Features
+## Project Purpose
 
-- Semantic HTML structure with `header`, `nav`, `main`, `section`, `footer`, and `form`.
-- Responsive portfolio layout.
-- Dark and light theme toggle.
-- Dynamic project listing from MySQL.
-- Dynamic experience log from MySQL.
-- Contact form with AJAX submission.
-- Admin login with PHP sessions and secure cookies.
-- Admin dashboard for adding and editing projects.
-- Admin dashboard for adding and editing experience records.
-- SQL export included in `database.sql`.
+The purpose of this project is to create a professional portfolio platform that can be used as a digital identity and career showcase. The system allows visitors to explore projects and contact the owner, while an administrator can manage content through a secure dashboard.
 
-## Technologies
+## Technologies Used
 
-- PHP
-- MySQL / MariaDB
 - HTML5
 - CSS3
 - JavaScript
+- PHP
+- MySQL
+- AJAX
 - XAMPP
+- InfinityFree Hosting
+
+## Features
+
+- Semantic HTML structure (header, nav, main, section, footer)
+- Responsive layout using CSS
+- Dark / light theme toggle
+- Dynamic project and experience data from MySQL
+- AJAX contact form
+- JavaScript form validation
+- Secure admin authentication
+- Session and cookie management
+- Admin dashboard
+- Database integration
+
+## System Architecture
+
+Frontend technologies were used to create an interactive interface, while PHP handled backend logic and database communication. AJAX was implemented to submit forms asynchronously without page refresh.
+
+Database tables include:
+
+- `admin_users`
+- `messages`
+- `projects`
+- `experience`
+
+## Challenges and Solutions
+
+During deployment several issues appeared, including routing problems, CSS path issues, session handling problems, and database configuration differences between local and production environments.
+
+These problems were solved by updating file paths, configuring session handling correctly, and adapting the application for InfinityFree hosting.
 
 ## Setup
 
-1. Copy the project folder into `xampp/htdocs/portfolio`.
-2. Start Apache and MySQL from XAMPP.
-3. Import `database.sql` into MySQL.
-4. Check database settings in `config/database.php`.
-5. Open `http://localhost/portfolio`.
+1. Copy project into `xampp/htdocs/portfolio`
+2. Start Apache and MySQL
+3. Import `database.sql`
+4. Configure `database.php`
+5. Open `localhost/portfolio`
 
-## Admin
+## Live Demo
 
-Admin login is available at:
+[https://elifportfolio.42web.io](https://elifportfolio.42web.io)
 
-```text
-http://localhost/portfolio/admin-login.php
-```
+## GitHub Repository
 
-Admin users are stored in the `admin_users` table. Passwords are stored as hashes.
-
-## Git History
-
-The repository is committed in multiple steps to show the development process:
-
-- Initial commit
-- Navbar added
-- Responsive layout completed
-- Admin panel added
-- Database connection fixed
-- Documentation added
+[https://github.com/elifhirli/portfolio](https://github.com/elifhirli/portfolio)

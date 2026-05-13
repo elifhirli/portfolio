@@ -50,6 +50,25 @@ if (isset($_GET['edit_experience'])) {
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     if (!verifyCsrfToken($_POST['csrf_token'] ?? '')) {
         $error = 'INVALID_SECURITY_TOKEN';
+    } elseif (($_POST['form_type'] ?? '') === 'delete_project') {
+        $projectId = (int) ($_POST['project_id'] ?? 0);
+
+        if ($projectId <= 0) {
+            $error = 'INVALID_PROJECT_ID';
+        } else {
+            $stmt = mysqli_prepare($conn, "DELETE FROM projects WHERE id = ?");
+            mysqli_stmt_bind_param($stmt, "i", $projectId);
+
+            if (mysqli_stmt_execute($stmt)) {
+                $message = 'PROJECT_DELETED';
+
+                if ($editingProject && (int) $editingProject['id'] === $projectId) {
+                    $editingProject = null;
+                }
+            } else {
+                $error = 'PROJECT_DELETE_FAILED';
+            }
+        }
     } elseif (($_POST['form_type'] ?? '') === 'experience') {
         $experienceId = (int) ($_POST['experience_id'] ?? 0);
         $company = trim($_POST['company'] ?? '');
@@ -257,7 +276,15 @@ $experienceRows = mysqli_query($conn, "SELECT id, company, role, start_date, end
                             <strong><?php echo e($project['title']); ?></strong>
                             <span><?php echo e($project['status']); ?></span>
                             <span><?php echo e($project['technologies']); ?></span>
-                            <span><a href="admin.php?edit=<?php echo (int) $project['id']; ?>">EDIT</a></span>
+                            <span class="admin-row-actions">
+                                <a href="admin.php?edit=<?php echo (int) $project['id']; ?>">EDIT</a>
+                                <form method="post" action="admin.php" onsubmit="return confirm('Delete this project?');">
+                                    <input type="hidden" name="csrf_token" value="<?php echo e(csrfToken()); ?>">
+                                    <input type="hidden" name="form_type" value="delete_project">
+                                    <input type="hidden" name="project_id" value="<?php echo (int) $project['id']; ?>">
+                                    <button class="admin-link-button" type="submit">DELETE</button>
+                                </form>
+                            </span>
                         </div>
                     <?php } ?>
                 <?php } else { ?>

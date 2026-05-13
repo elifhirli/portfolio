@@ -12,7 +12,7 @@ endobj
 << /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>
 endobj
 5 0 obj
-<< /Length 1254 >>
+<< /Length 2750 >>
 stream
 BT
 /F1 18 Tf
@@ -22,57 +22,123 @@ BT
 0 -28 Td
 () Tj
 0 -16 Td
-(Personal portfolio website built with PHP, MySQL, CSS, and JavaScript.) Tj
+(Personal portfolio website developed using PHP, MySQL, JavaScript, HTML5, and CSS3.) Tj
+0 -16 Td
+(The project was designed as a dynamic full-stack web application to showcase) Tj
+0 -16 Td
+(academic background, projects, and technical skills.) Tj
 0 -16 Td
 () Tj
+/F1 12 Tf
+0 -18 Td
+(Project Purpose) Tj
+/F1 10 Tf
 0 -16 Td
+(The purpose of this project is to create a professional portfolio platform that can be) Tj
+0 -16 Td
+(used as a digital identity and career showcase. The system allows visitors to explore) Tj
+0 -16 Td
+(projects and contact the owner, while an administrator can manage content through) Tj
+0 -16 Td
+(a secure dashboard.) Tj
+0 -16 Td
+() Tj
+/F1 12 Tf
+0 -18 Td
+(Technologies Used) Tj
+/F1 10 Tf
+0 -16 Td
+(- HTML5, CSS3, JavaScript, PHP, MySQL, AJAX, XAMPP, InfinityFree Hosting) Tj
+0 -16 Td
+() Tj
+/F1 12 Tf
+0 -18 Td
 (Features) Tj
+/F1 10 Tf
 0 -16 Td
-(- Semantic HTML: header, nav, main, section, footer, form) Tj
+(- Semantic HTML structure: header, nav, main, section, footer) Tj
 0 -16 Td
-(- Responsive portfolio layout) Tj
+(- Responsive layout using CSS) Tj
 0 -16 Td
-(- Dark and light theme toggle) Tj
+(- Dark / light theme toggle) Tj
 0 -16 Td
-(- Dynamic projects and experience from MySQL) Tj
+(- Dynamic project and experience data from MySQL) Tj
 0 -16 Td
 (- AJAX contact form) Tj
 0 -16 Td
-(- Admin login with PHP sessions and secure cookies) Tj
+(- JavaScript form validation) Tj
 0 -16 Td
-(- Admin dashboard for adding/editing projects) Tj
+(- Secure admin authentication) Tj
 0 -16 Td
-(- Admin dashboard for adding/editing experience records) Tj
+(- Session and cookie management) Tj
 0 -16 Td
-(- database.sql included for import) Tj
+(- Admin dashboard) Tj
+0 -16 Td
+(- Database integration) Tj
+0 -16 Td
+() Tj
+/F1 12 Tf
+0 -18 Td
+(System Architecture) Tj
+/F1 10 Tf
+0 -16 Td
+(Frontend technologies were used to create an interactive interface, while PHP handled) Tj
+0 -16 Td
+(backend logic and database communication. AJAX was implemented to submit forms) Tj
+0 -16 Td
+(asynchronously without page refresh.) Tj
 0 -16 Td
 () Tj
 0 -16 Td
-(Setup) Tj
+(Database tables: admin_users, messages, projects, experience) Tj
 0 -16 Td
-(1. Copy folder to xampp/htdocs/portfolio) Tj
+() Tj
+/F1 12 Tf
+0 -18 Td
+(Challenges and Solutions) Tj
+/F1 10 Tf
+0 -16 Td
+(During deployment several issues appeared, including routing problems, CSS path) Tj
+0 -16 Td
+(issues, session handling problems, and database configuration differences between) Tj
+0 -16 Td
+(local and production environments. These problems were solved by updating file) Tj
+0 -16 Td
+(paths, configuring session handling correctly, and adapting the application for) Tj
+0 -16 Td
+(InfinityFree hosting.) Tj
+0 -16 Td
+() Tj
+/F1 12 Tf
+0 -18 Td
+(Setup) Tj
+/F1 10 Tf
+0 -16 Td
+(1. Copy project into xampp/htdocs/portfolio) Tj
 0 -16 Td
 (2. Start Apache and MySQL) Tj
 0 -16 Td
 (3. Import database.sql) Tj
 0 -16 Td
-(4. Check config/database.php) Tj
+(4. Configure database.php) Tj
 0 -16 Td
-(5. Open http://localhost/portfolio) Tj
-0 -16 Td
-() Tj
-0 -16 Td
-(Admin) Tj
-0 -16 Td
-(Login page: http://localhost/portfolio/admin-login.php) Tj
-0 -16 Td
-(Admin users are stored in admin_users table. Passwords are hashed.) Tj
+(5. Open localhost/portfolio) Tj
 0 -16 Td
 () Tj
+/F1 12 Tf
+0 -18 Td
+(Live Demo) Tj
+/F1 10 Tf
 0 -16 Td
-(Repository) Tj
+(https://elifportfolio.42web.io) Tj
 0 -16 Td
-(GitHub: https://github.com/elifhirli/portfolio) Tj
+() Tj
+/F1 12 Tf
+0 -18 Td
+(GitHub Repository) Tj
+/F1 10 Tf
+0 -16 Td
+(https://github.com/elifhirli/portfolio) Tj
 0 -16 Td
 ET
 endstream
@@ -88,5 +154,5 @@ xref
 trailer
 << /Size 6 /Root 1 0 R >>
 startxref
-1617
+3113
 %%EOF

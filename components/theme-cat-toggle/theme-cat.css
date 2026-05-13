@@ -1,0 +1,275 @@
+body.light-mode {
+    --bg: #f7f7f4;
+    --bg-soft: #ffffff;
+    --panel: #ffffff;
+    --panel-strong: #f1f2f4;
+    --text: #05070d;
+    --muted: #5f6570;
+    --line: #cfd3da;
+    --line-soft: #e5e7eb;
+    --accent: #0b5cff;
+    --accent-2: #1f9d66;
+}
+
+body.light-mode ::selection {
+    background: rgba(11, 92, 255, 0.18);
+    color: #05070d;
+}
+
+body.light-mode header {
+    background: rgba(255, 255, 255, 0.94);
+}
+
+body.light-mode .status-bar {
+    background: rgba(255, 255, 255, 0.94);
+    color: var(--muted);
+}
+
+body.light-mode .status-bar strong,
+body.light-mode .status-bar .xref strong,
+body.light-mode .hero-title,
+body.light-mode .hero-label,
+body.light-mode .hero-label::after,
+body.light-mode .hero-box,
+body.light-mode .terminal-line,
+body.light-mode .terminal-line strong,
+body.light-mode .language-row,
+body.light-mode .section-header h2,
+body.light-mode .featured-card h3,
+body.light-mode .featured-card p,
+body.light-mode .featured-card::after,
+body.light-mode .project-meta,
+body.light-mode .project-meta span,
+body.light-mode .featured-card > span:not(.panel-title),
+body.light-mode .skill-column h4,
+body.light-mode .skill-row span,
+body.light-mode .skill-row small,
+body.light-mode .mini-panel .terminal-line,
+body.light-mode .mini-panel-footer,
+body.light-mode .experience-card h3,
+body.light-mode .experience-role,
+body.light-mode .experience-period,
+body.light-mode .experience-lines p,
+body.light-mode .project-card::before,
+body.light-mode .project-content h3,
+body.light-mode .project-content p,
+body.light-mode .project-links a,
+body.light-mode .contact-item,
+body.light-mode .contact-item a,
+body.light-mode .contact-links a {
+    color: var(--text);
+}
+
+body.light-mode .hero-box,
+body.light-mode .terminal-panel,
+body.light-mode .featured-card,
+body.light-mode .skills-grid,
+body.light-mode .mini-panel,
+body.light-mode .experience-card,
+body.light-mode .contact-panel,
+body.light-mode .project-card {
+    background: rgba(255, 255, 255, 0.78);
+    border-color: var(--line);
+    box-shadow: 2px 2px 0 rgba(5, 7, 13, 0.12);
+}
+
+body.light-mode .terminal-panel,
+body.light-mode .hero-box {
+    box-shadow: none;
+}
+
+body.light-mode .hero-box span,
+body.light-mode .panel-title {
+    background: var(--bg);
+    color: var(--muted);
+}
+
+body.light-mode section + section,
+body.light-mode .projects-container,
+body.light-mode .dashboard-grid,
+body.light-mode .section-header,
+body.light-mode .skill-column,
+body.light-mode .repo-list {
+    border-color: var(--line-soft);
+}
+
+body.light-mode .language-row {
+    border-bottom-color: var(--line-soft);
+}
+
+body.light-mode .language-row span,
+body.light-mode .experience-tech,
+body.light-mode .repo-item span,
+body.light-mode .info {
+    color: var(--accent);
+}
+
+body.light-mode .language-row span,
+body.light-mode .experience-tech {
+    border-color: rgba(11, 92, 255, 0.38);
+    background: rgba(11, 92, 255, 0.08);
+}
+
+body.light-mode .gpa,
+body.light-mode .status-dot,
+body.light-mode .ok {
+    color: var(--accent-2);
+}
+
+body.light-mode .warn {
+    color: #b88200;
+}
+
+body.light-mode .featured-card a,
+body.light-mode .project-links .server-unavailable,
+body.light-mode .contact-submit {
+    border-color: var(--text);
+    color: var(--text);
+}
+
+body.light-mode .featured-card a:hover {
+    background: var(--text);
+    color: var(--bg);
+}
+
+body.light-mode .skill-row small,
+body.light-mode .repo-item,
+body.light-mode .experience-period {
+    border-color: rgba(5, 7, 13, 0.45);
+    background: rgba(255, 255, 255, 0.34);
+}
+
+body.light-mode .repo-item:hover,
+body.light-mode .repo-item:focus-visible {
+    border-color: rgba(11, 92, 255, 0.6);
+    background: rgba(11, 92, 255, 0.08);
+}
+
+body.light-mode .contribution-grid.small span {
+    border-color: rgba(31, 157, 102, 0.18);
+    background: rgba(31, 157, 102, 0.2);
+}
+
+body.light-mode .contribution-grid.small span:nth-child(2n),
+body.light-mode .contribution-grid.small span:nth-child(5n) {
+    background: rgba(31, 157, 102, 0.78);
+}
+
+body.light-mode .contribution-grid.small span:nth-child(7n),
+body.light-mode .contribution-grid.small span:nth-child(11n) {
+    background: rgba(31, 157, 102, 0.45);
+}
+
+body.light-mode .project-content span,
+body.light-mode .project-image-placeholder span,
+body.light-mode .project-preview span {
+    background: rgba(11, 92, 255, 0.08);
+    color: var(--accent);
+}
+
+body.light-mode .project-slider,
+body.light-mode .project-card.in-progress .project-slider,
+body.light-mode .project-card.in-progress .project-slider img {
+    background: #f4f6fa;
+}
+
+body.light-mode input,
+body.light-mode textarea,
+body.light-mode select {
+    background: rgba(255, 255, 255, 0.82);
+    color: var(--text);
+    border-color: var(--line);
+}
+
+body.light-mode input:focus,
+body.light-mode textarea:focus,
+body.light-mode select:focus {
+    border-color: var(--accent);
+}
+
+body.light-mode .contact-submit {
+    box-shadow: 2px 2px 0 rgba(5, 7, 13, 0.14);
+}
+
+body.light-mode .contact-submit:hover,
+body.light-mode .contact-submit:focus-visible {
+    background: rgba(11, 92, 255, 0.08);
+    box-shadow: 2px 2px 0 rgba(11, 92, 255, 0.24);
+}
+
+.theme-cat-widget {
+    display: inline-flex;
+    align-items: center;
+    flex: 0 0 auto;
+    margin-left: clamp(2px, 1.5vw, 24px);
+}
+
+.theme-cat-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border: 0;
+    background: transparent;
+    padding: 0;
+    cursor: pointer;
+}
+
+.theme-cat-button:hover,
+.theme-cat-button:active,
+.theme-cat-button:focus {
+    border: 0;
+    background: transparent;
+    color: inherit;
+}
+
+.theme-cat-button:focus-visible {
+    outline: 1px solid var(--text);
+    outline-offset: 6px;
+}
+
+.theme-cat-button:disabled {
+    cursor: wait;
+}
+
+.theme-cat {
+    width: clamp(70px, 8vw, 104px);
+    height: clamp(46px, 5.2vw, 64px);
+    object-fit: contain;
+    object-position: center;
+    background: transparent;
+    transform-origin: 50% 90%;
+    transition: opacity 0.16s ease, transform 0.16s ease;
+    will-change: opacity, transform;
+}
+
+.theme-cat-button:hover .theme-cat {
+    opacity: 0.88;
+}
+
+.theme-cat.is-animating {
+    animation: themeCatBounce 0.3s ease;
+}
+
+.theme-cat.is-switching-frame {
+    opacity: 0.62;
+    transform: translateY(1px) scale(0.985);
+}
+
+@keyframes themeCatBounce {
+    0%,
+    100% {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+
+    50% {
+        opacity: 0.92;
+        transform: translateY(-1px) scale(1.012);
+    }
+}
+
+@media (max-width: 920px) {
+    .theme-cat-widget {
+        justify-content: flex-end;
+    }
+}

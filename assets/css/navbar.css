@@ -1,0 +1,92 @@
+header {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    border-bottom: 1px solid var(--line-soft);
+    background: rgba(17, 18, 22, 0.96);
+    backdrop-filter: blur(16px);
+}
+
+nav {
+    width: 100%;
+    min-height: 64px;
+    margin: 0;
+    padding: 0 clamp(18px, 4vw, 50px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: clamp(14px, 3vw, 34px);
+}
+
+nav h2 {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    color: var(--text);
+    font-size: 20px;
+    font-weight: 900;
+    letter-spacing: 0;
+    text-transform: uppercase;
+    white-space: nowrap;
+}
+
+nav h2::before {
+    content: ">_";
+    display: inline-flex;
+    width: 32px;
+    height: 32px;
+    align-items: center;
+    justify-content: center;
+    flex: 0 0 auto;
+    border: 1px solid var(--text);
+    border-radius: 4px;
+    background: rgba(255, 255, 255, 0.04);
+    color: var(--text);
+    font-family: "Courier New", Courier, monospace;
+    font-size: 18px;
+    font-weight: 900;
+    line-height: 1;
+}
+
+nav h2::after {
+    content: " V_02.0.4";
+    margin-left: 2px;
+    color: #5b5d65;
+    font-size: 15px;
+    font-weight: 900;
+}
+
+nav ul {
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: clamp(14px, 2.8vw, 30px);
+    flex-wrap: nowrap;
+}
+
+nav::after {
+    content: none;
+}
+
+nav a {
+    display: inline-flex;
+    min-height: 40px;
+    align-items: center;
+    border: 1px solid transparent;
+    padding: 5px 0;
+    color: var(--muted);
+    font-size: 14px;
+    font-weight: 900;
+    text-transform: uppercase;
+    transition: color 0.2s ease, border-color 0.2s ease, background 0.2s ease;
+}
+
+nav a:hover,
+nav a:focus-visible {
+    border-color: transparent;
+    background: transparent;
+    color: var(--text);
+    outline: none;
+}
